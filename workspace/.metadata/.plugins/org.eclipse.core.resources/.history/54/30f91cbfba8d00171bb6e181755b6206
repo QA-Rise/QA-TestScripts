@@ -1,0 +1,104 @@
+package MyTestNG;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FindBrokenLinks {
+
+	public static void main(String[] args) {
+
+		String kaplanURL = "C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\Kaplan.xlsx";
+
+		FindBrokenLinks notFound = new FindBrokenLinks();
+		// Redirects urls = new Redirects();
+		notFound.findBrokenLinks(kaplanURL);
+		// urls.redirects(kaplanRedirects);
+
+	}
+
+	public void findBrokenLinks(String fileName) {
+		WebDriver driver;
+		String title;
+		System.setProperty("webdriver.gecko.driver",
+				"C:\\Users\\Iliona.Iliadhi\\Work FoldeRS\\Desktop\\geckodriver.exe");
+		// System.setProperty("webdriver.chrome.driver",
+		// "C:\\users\\iliona.iliadhi\\Work
+		// Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
+		// driver = new ChromeDriver();
+		driver = new FirefoxDriver();
+		// driver.manage().window().maximize();
+
+		InputStream XlsxFileToRead = null;
+		OutputStream XlsxFileToWrite = null;
+
+		XSSFWorkbook workbook = null;
+
+		try {
+			XlsxFileToRead = new FileInputStream(fileName);
+
+			// Getting the workbook instance for xlsx file
+			workbook = new XSSFWorkbook(XlsxFileToRead);
+
+			// getting the first sheet from the workbook using index
+			XSSFSheet sheet = workbook.getSheetAt(2);
+
+			for (int i = 14000; i <= sheet.getLastRowNum(); i++) {
+				String url = sheet.getRow(i).getCell(0).getStringCellValue();
+				
+				System.out.println(url);
+				System.out.print(sheet.getLastRowNum());
+				driver.get(url);
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				title = driver.getTitle();
+				System.out.println(title);
+
+				Cell resultCell = sheet.getRow(i).getCell(1);
+				if (resultCell == null) {
+					resultCell = sheet.getRow(i).createCell(1);
+
+				}
+
+				if (title.contains("404")) {
+					resultCell.setCellValue("FAIL");
+					System.out.print(sheet.getRow(i).getCell(1));
+
+
+				} else {
+					resultCell.setCellValue("PASS");
+					System.out.print(sheet.getRow(i).getCell(1));
+
+
+				}
+
+			}
+
+			XlsxFileToRead.close();
+			XlsxFileToWrite = new FileOutputStream(fileName);
+			workbook.write(XlsxFileToWrite);
+			workbook.close();
+			XlsxFileToWrite.close();
+
+			driver.quit();
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

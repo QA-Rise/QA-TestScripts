@@ -1,0 +1,93 @@
+package MyTestNG;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class ReadXlsx {
+
+	@SuppressWarnings("deprecation")
+	public void readXLSXFile(String fileName) {
+		InputStream XlsxFileToRead = null;
+		XSSFWorkbook workbook = null;
+		try {
+			XlsxFileToRead = new FileInputStream(fileName);
+
+			// Getting the workbook instance for xlsx file
+			workbook = new XSSFWorkbook(XlsxFileToRead);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// getting the first sheet from the workbook using sheet name.
+		// We can also pass the index of the sheet which starts from '0'.
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		XSSFRow row;
+		XSSFCell cell;
+
+		// Iterating all the rows in the sheet
+		Iterator<Row> rows = sheet.rowIterator();
+
+		while (rows.hasNext()) {
+			row = (XSSFRow) rows.next();
+
+			// Iterating all the cells of the current row
+			Iterator<Cell> cells = row.cellIterator();
+
+			while (cells.hasNext()) {
+				cell = (XSSFCell) cells.next();
+				System.out.print(cell.getStringCellValue() + "\n");
+
+
+				//if (cell.getCellType() == XSSFCell.CELL_TYPE_STRING)
+				
+
+				try {
+					XlsxFileToRead.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+
+		String path = "C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\Kaplan.xlsx";
+		ReadXlsx readXlsx = new ReadXlsx();
+		readXlsx.readXLSXFile(path);
+
+	}
+
+}
+
+/*
+ * WebDriver driver; String url;
+ * 
+ * ChromeOptions chromeOptions = new ChromeOptions(); System.setProperty(
+ * "webdriver.chrome.driver","C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe"
+ * );
+ * 
+ * 
+ * 
+ * driver = new ChromeDriver(); driver.manage().window().maximize();
+ * driver.get(); driver.manage().timeouts().implicitlyWait(10,
+ * TimeUnit.SECONDS);
+ */

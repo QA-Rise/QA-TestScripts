@@ -1,0 +1,78 @@
+package MyTestNG;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ReadXlsx {
+
+	public static void main(String[] args) {
+
+		String path = "C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\Kaplan.xlsx";
+		ReadXlsx readXlsx = new ReadXlsx();
+		readXlsx.readXLSXFile(path);
+
+	}
+
+	public void readXLSXFile(String fileName) {
+		WebDriver driver;
+		String title;
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		InputStream XlsxFileToRead = null;
+		XSSFWorkbook workbook = null;
+
+		try {
+			XlsxFileToRead = new FileInputStream(fileName);
+
+			// Getting the workbook instance for xlsx file
+			workbook = new XSSFWorkbook(XlsxFileToRead);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// getting the first sheet from the workbook using sheet name.
+		// We can also pass the index of the sheet which starts from '0'.
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+
+		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+			String url = sheet.getRow(i).getCell(0).getStringCellValue();
+			// System.out.println(url);
+			driver.get(url);
+			driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
+			ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(0));
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			title = driver.getTitle();
+
+			if (title.contains("404")) {
+				System.out.println("Page title is " + title + ", Link is broken");
+			} else {
+				System.out.println("Expected page title was " + title + ", Link is live");
+			}
+			driver.quit();
+		}
+
+		try {
+			XlsxFileToRead.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

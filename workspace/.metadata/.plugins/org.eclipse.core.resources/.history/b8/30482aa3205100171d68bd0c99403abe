@@ -1,0 +1,19 @@
+package MyTestNG;
+
+import org.testng.annotations.Test;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.*;
+
+public class MyTestNG {
+	
+	@Test
+	public void LaunchChrome_Method1() {
+		System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.google.com");
+	}
+  }
