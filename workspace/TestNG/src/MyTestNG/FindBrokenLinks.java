@@ -21,9 +21,9 @@ public class FindBrokenLinks {
 
 		String bscURL = "C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\Kaplan.xlsx";
 
-		//FindBrokenLinks notFound = new FindBrokenLinks();
+		// FindBrokenLinks notFound = new FindBrokenLinks();
 		Redirects urls = new Redirects();
-		//notFound.findBrokenLinks(bscURL);
+		// notFound.findBrokenLinks(bscURL);
 		urls.redirects(bscURL);
 
 	}
@@ -31,11 +31,12 @@ public class FindBrokenLinks {
 	public void findBrokenLinks(String fileName) {
 		WebDriver driver;
 		String title;
-		//System.setProperty("webdriver.gecko.driver",
-				//"C:\\Users\\Iliona.Iliadhi\\Work FoldeRS\\Desktop\\geckodriver.exe");
-		 System.setProperty("webdriver.chrome.driver","C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
-		 driver = new ChromeDriver();
-		//driver = new FirefoxDriver();
+		// System.setProperty("webdriver.gecko.driver",
+		// "C:\\Users\\Iliona.Iliadhi\\Work FoldeRS\\Desktop\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		// driver = new FirefoxDriver();
 		// driver.manage().window().maximize();
 
 		InputStream XlsxFileToRead = null;
@@ -51,15 +52,15 @@ public class FindBrokenLinks {
 			// getting the first sheet from the workbook using index
 			XSSFSheet sheet = workbook.getSheetAt(0);
 
-			for (int i=0; i <=sheet.getLastRowNum(); i++) {
+			for (int i = 0; i <= sheet.getLastRowNum(); i++) {
 				System.out.println(i);
 				System.out.println(sheet.getLastRowNum());
 				String url = sheet.getRow(i).getCell(0).getStringCellValue();
-				//System.out.println(url);
+				// System.out.println(url);
 				driver.get(url);
-			    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 				title = driver.getTitle();
-				//System.out.println(title);
+				// System.out.println(title);
 
 				Cell resultCell = sheet.getRow(i).getCell(1);
 				if (resultCell == null) {

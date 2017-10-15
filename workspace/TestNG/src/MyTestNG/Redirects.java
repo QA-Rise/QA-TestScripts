@@ -1,5 +1,6 @@
 package MyTestNG;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -12,34 +13,45 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.security.Credentials;
-import org.openqa.selenium.security.UserAndPassword;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Redirects {
 
 	public void redirects(String fileName) {
-		WebDriver driver;
 
-		//System.setProperty("webdriver.chrome.driver",
-				//"C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
-		System.setProperty("webdriver.gecko.driver","C:\\Users\\Iliona.Iliadhi\\Work FoldeRS\\Desktop\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
+		//System.setProperty("webdriver.gecko.driver",
+			//	"C:\\Users\\Iliona.Iliadhi\\Work FoldeRS\\Desktop\\geckodriver.exe");
 
-		//driver = new ChromeDriver();
-		driver = new FirefoxDriver();
+		 ChromeDriver driver = new ChromeDriver();
 
-		// driver.manage().window().maximize();
 		XSSFWorkbook workbook = null;
 
 		InputStream XlsxFileToRead = null;
 		OutputStream XlsxFileToWrite = null;
 
 		try {
+//
+//			DesiredCapabilities dc = new DesiredCapabilities();
+//			dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
+//			FirefoxProfile firefoxProfile = new FirefoxProfile(new File(
+//					"C:\\Users\\Iliona.Iliadhi\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\fx17qhap.SeleniumProfile"));
+//			FirefoxDriver driver = new FirefoxDriver(firefoxProfile);
+			driver.navigate().to("https://kaplanreview:qAwEsW2b@main-dev-kaplan.cphostaccess.com");
+
+			// driver.manage().window().maximize();
+
 			XlsxFileToRead = new FileInputStream(fileName);
 			workbook = new XSSFWorkbook(XlsxFileToRead);
 
@@ -50,24 +62,11 @@ public class Redirects {
 			XSSFSheet sheet = workbook.getSheetAt(0);
 
 			for (int i = 0; i <= sheet.getLastRowNum(); i++) {
-				System.out.println(sheet.getLastRowNum());
 				String originalKaplanUrl = sheet.getRow(i).getCell(0).getStringCellValue();
 				String redirectKaplanUrl = sheet.getRow(i).getCell(1).getStringCellValue();
+
 				System.out.println(originalKaplanUrl);
 				driver.get(originalKaplanUrl);
-				try{
-					   //Wait 10 seconds till alert is present
-					   WebDriverWait wait = new WebDriverWait(driver, 10);
-					   Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-					   
-					   //Accepting alert.
-					   alert.accept();
-					   System.out.println("Accepted the alert successfully.");
-					}catch(Throwable e){
-					   System.err.println("Error came while waiting for the alert popup. "+e.getMessage());
-					}
-
-				// driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 				String liveKaplanUrl = driver.getCurrentUrl();
 
 				Cell resultCell = sheet.getRow(i).getCell(2);
