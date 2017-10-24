@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="MyTestNG.MyTestNG">
+      <class name="MyTestNG.jenkins_demo">
         <methods>
-          <include name="FaceBookPageTitleVerification"/>
+          <include name="testgooglrsearch"/>
         </methods>
-      </class> <!-- MyTestNG.MyTestNG -->
+      </class> <!-- MyTestNG.jenkins_demo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

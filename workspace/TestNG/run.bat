@@ -1,0 +1,1 @@
+java -cp "C:\Users\Iliona.Iliadhi\Work FoldeRS\Documents\GitHub\QA-TestScripts\workspace\TestNG\lib\*;C:\Users\Iliona.Iliadhi\Work FoldeRS\Documents\GitHub\QA-TestScripts\workspace\TestNG\bin" org.testng.TestNG "C:\Users\Iliona.Iliadhi\Work FoldeRS\Documents\GitHub\QA-TestScripts\workspace\TestNG\testng.xml"
