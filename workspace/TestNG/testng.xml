@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Default suite" >
-    <test name="Default test">
-    <classes>
-      <class name="MyTestNG.jenkins_demo">
-      </class> <!-- MyTestNG.jenkins_demo -->
-      </classes>
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+<suite name="Default suite">
+	<test name="Default test">
+		<classes>
+			<class name = "MyTestNG.FindBrokenLinks"/>
+			<class name = "MyTestNG.jenkins_demo"/>
+			<class name = "MyTestNG.Redirects"/>
+		</classes>
+	</test> <!-- Default test -->
+</suite> <!-- Default suite -->
   

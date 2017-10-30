@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3524" started-at="2017-10-20T20:02:18Z" finished-at="2017-10-20T20:02:22Z">
+  <suite name="Default suite" duration-ms="36792" started-at="2017-10-30T16:16:10Z" finished-at="2017-10-30T16:16:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3524" started-at="2017-10-20T20:02:18Z" finished-at="2017-10-20T20:02:22Z">
+    <test name="Default test" duration-ms="36792" started-at="2017-10-30T16:16:10Z" finished-at="2017-10-30T16:16:47Z">
+      <class name="MyTestNG.FindBrokenLinks">
+        <test-method status="PASS" signature="findBrokenLinks()[pri:0, instance:MyTestNG.FindBrokenLinks@1593948d]" name="findBrokenLinks" duration-ms="5486" started-at="2017-10-30T11:16:10Z" finished-at="2017-10-30T11:16:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findBrokenLinks -->
+      </class> <!-- MyTestNG.FindBrokenLinks -->
       <class name="MyTestNG.jenkins_demo">
-        <test-method status="PASS" signature="testgooglesearch()[pri:0, instance:MyTestNG.jenkins_demo@62ee68d8]" name="testgooglesearch" duration-ms="3505" started-at="2017-10-20T15:02:18Z" finished-at="2017-10-20T15:02:22Z">
+        <test-method status="PASS" signature="testgooglesearch()[pri:0, instance:MyTestNG.jenkins_demo@4cc0edeb]" name="testgooglesearch" duration-ms="4061" started-at="2017-10-30T11:16:16Z" finished-at="2017-10-30T11:16:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testgooglesearch -->
       </class> <!-- MyTestNG.jenkins_demo -->
+      <class name="MyTestNG.Redirects">
+        <test-method status="PASS" signature="redirects()[pri:0, instance:MyTestNG.Redirects@457e2f02]" name="redirects" duration-ms="27221" started-at="2017-10-30T11:16:20Z" finished-at="2017-10-30T11:16:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- redirects -->
+      </class> <!-- MyTestNG.Redirects -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

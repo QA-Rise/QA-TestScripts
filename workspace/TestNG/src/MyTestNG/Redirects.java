@@ -11,15 +11,19 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class Redirects {
 
-	public void redirects(String fileName) {
+	@Test
+	public void redirects() {
 
-		System.setProperty("webdriver.chrome.driver","C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
-		//System.setProperty("webdriver.gecko.driver","C:\\Users\\Iliona.Iliadhi\\Work FoldeRS\\Desktop\\geckodriver.exe");
-
-		 ChromeDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
+		// System.setProperty("webdriver.gecko.driver","C:\\Users\\Iliona.Iliadhi\\Work
+		// FoldeRS\\Desktop\\geckodriver.exe");
+		String redirects = "C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\Kaplan.xlsx";
+		ChromeDriver driver = new ChromeDriver();
 
 		XSSFWorkbook workbook = null;
 
@@ -27,17 +31,18 @@ public class Redirects {
 		OutputStream XlsxFileToWrite = null;
 
 		try {
-//
-//			DesiredCapabilities dc = new DesiredCapabilities();
-//			dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
-//			FirefoxProfile firefoxProfile = new FirefoxProfile(new File(
-//					"C:\\Users\\Iliona.Iliadhi\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\fx17qhap.SeleniumProfile"));
-//			FirefoxDriver driver = new FirefoxDriver(firefoxProfile);
+			//
+			// DesiredCapabilities dc = new DesiredCapabilities();
+			// dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,
+			// UnexpectedAlertBehaviour.ACCEPT);
+			// FirefoxProfile firefoxProfile = new FirefoxProfile(new File(
+			// "C:\\Users\\Iliona.Iliadhi\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\fx17qhap.SeleniumProfile"));
+			// FirefoxDriver driver = new FirefoxDriver(firefoxProfile);
 			driver.navigate().to("https://kaplanreview:qAwEsW2b@main-dev-kaplan.cphostaccess.com");
 
 			// driver.manage().window().maximize();
 
-			XlsxFileToRead = new FileInputStream(fileName);
+			XlsxFileToRead = new FileInputStream(redirects);
 			workbook = new XSSFWorkbook(XlsxFileToRead);
 
 			// Getting the workbook instance for xlsx file
@@ -70,7 +75,7 @@ public class Redirects {
 			}
 
 			XlsxFileToRead.close();
-			XlsxFileToWrite = new FileOutputStream(fileName);
+			XlsxFileToWrite = new FileOutputStream(redirects);
 			workbook.write(XlsxFileToWrite);
 			XlsxFileToWrite.close();
 			workbook.close();

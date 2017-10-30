@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Iliona.Iliadhi\AppData\Local\Temp\testng-eclipse--778725318\testng-customsuite.xml</span>
+                    <span>C:\Users\Iliona.Iliadhi\Work Folders\Documents\GitHub\QA-TestScripts\workspace\TestNG\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,16 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyTestNG.FindBrokenLinks" hash-for-method="findBrokenLinks">findBrokenLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyTestNG.Redirects" hash-for-method="redirects">redirects</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyTestNG.jenkins_demo" hash-for-method="testgooglesearch">testgooglesearch</a> <!-- method navigator-link -->
@@ -120,6 +130,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">MyTestNG.Redirects</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="redirects">
+                  </a> <!-- redirects -->
+                  <span class="method-name">redirects</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">MyTestNG.jenkins_demo</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -132,19 +157,36 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">MyTestNG.FindBrokenLinks</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="findBrokenLinks">
+                  </a> <!-- findBrokenLinks -->
+                  <span class="method-name">findBrokenLinks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Iliona.Iliadhi\AppData\Local\Temp\testng-eclipse--778725318\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Iliona.Iliadhi\Work Folders\Documents\GitHub\QA-TestScripts\workspace\TestNG\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite name=&quot;Default suite&quot;&gt;
+  &lt;test name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;MyTestNG.FindBrokenLinks&quot;/&gt;
       &lt;class name=&quot;MyTestNG.jenkins_demo&quot;/&gt;
+      &lt;class name=&quot;MyTestNG.Redirects&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -158,7 +200,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Default test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +226,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testgooglesearch')
-data.setCell(0, 2, 'MyTestNG.jenkins_demo')
-data.setCell(0, 3, 3505);
+data.setCell(0, 1, 'redirects')
+data.setCell(0, 2, 'MyTestNG.Redirects')
+data.setCell(0, 3, 27221);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'findBrokenLinks')
+data.setCell(1, 2, 'MyTestNG.FindBrokenLinks')
+data.setCell(1, 3, 5486);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testgooglesearch')
+data.setCell(2, 2, 'MyTestNG.jenkins_demo')
+data.setCell(2, 3, 4061);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -219,10 +269,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">MyTestNG.FindBrokenLinks</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">findBrokenLinks</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">MyTestNG.jenkins_demo</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testgooglesearch</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">5489 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">MyTestNG.Redirects</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">redirects</span>
+                <span class="method-start">9551 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

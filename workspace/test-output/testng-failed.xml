@@ -3,6 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+      <class name="MyTestNG.FindBrokenLinks">
+        <methods>
+          <include name="findBrokenLinks"/>
+        </methods>
+      </class> <!-- MyTestNG.FindBrokenLinks -->
       <class name="MyTestNG.Redirects">
         <methods>
           <include name="redirects"/>

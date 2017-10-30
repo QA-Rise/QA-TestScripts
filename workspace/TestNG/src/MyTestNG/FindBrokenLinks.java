@@ -14,23 +14,17 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 public class FindBrokenLinks {
 
-	public static void main(String[] args) {
+	@Test
+	public void findBrokenLinks() {
 
-		String bscURL = "C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\Kaplan.xlsx";
-
-		// FindBrokenLinks notFound = new FindBrokenLinks();
-		Redirects urls = new Redirects();
-		// notFound.findBrokenLinks(bscURL);
-		urls.redirects(bscURL);
-
-	}
-
-	public void findBrokenLinks(String fileName) {
 		WebDriver driver;
 		String title;
+		String bscURL = "C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\Kaplan.xlsx";
+
 		// System.setProperty("webdriver.gecko.driver",
 		// "C:\\Users\\Iliona.Iliadhi\\Work FoldeRS\\Desktop\\geckodriver.exe");
 		System.setProperty("webdriver.chrome.driver",
@@ -45,7 +39,7 @@ public class FindBrokenLinks {
 		XSSFWorkbook workbook = null;
 
 		try {
-			XlsxFileToRead = new FileInputStream(fileName);
+			XlsxFileToRead = new FileInputStream(bscURL);
 
 			// Getting the workbook instance for xlsx file
 			workbook = new XSSFWorkbook(XlsxFileToRead);
@@ -77,7 +71,7 @@ public class FindBrokenLinks {
 			}
 
 			XlsxFileToRead.close();
-			XlsxFileToWrite = new FileOutputStream(fileName);
+			XlsxFileToWrite = new FileOutputStream(bscURL);
 			workbook.write(XlsxFileToWrite);
 			XlsxFileToWrite.close();
 			workbook.close();
