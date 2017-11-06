@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16741" started-at="2017-10-30T16:35:38Z" finished-at="2017-10-30T16:35:55Z">
+  <suite name="Default suite" duration-ms="20547" started-at="2017-11-03T22:07:48Z" finished-at="2017-11-03T22:08:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16741" started-at="2017-10-30T16:35:38Z" finished-at="2017-10-30T16:35:55Z">
+    <test name="Default test" duration-ms="20547" started-at="2017-11-03T22:07:48Z" finished-at="2017-11-03T22:08:09Z">
       <class name="MyTestNG.FindBrokenLinks">
-        <test-method status="PASS" signature="findBrokenLinks()[pri:0, instance:MyTestNG.FindBrokenLinks@11531931]" name="findBrokenLinks" duration-ms="4394" started-at="2017-10-30T11:35:38Z" finished-at="2017-10-30T11:35:43Z">
+        <test-method status="PASS" signature="findBrokenLinks()[pri:0, instance:MyTestNG.FindBrokenLinks@11531931]" name="findBrokenLinks" duration-ms="13591" started-at="2017-11-03T17:07:48Z" finished-at="2017-11-03T17:08:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- findBrokenLinks -->
       </class> <!-- MyTestNG.FindBrokenLinks -->
       <class name="MyTestNG.jenkins_demo">
-        <test-method status="PASS" signature="testgooglesearch()[pri:0, instance:MyTestNG.jenkins_demo@45c8e616]" name="testgooglesearch" duration-ms="2271" started-at="2017-10-30T11:35:43Z" finished-at="2017-10-30T11:35:45Z">
+        <test-method status="PASS" signature="testgooglesearch()[pri:0, instance:MyTestNG.jenkins_demo@45c8e616]" name="testgooglesearch" duration-ms="2241" started-at="2017-11-03T17:08:02Z" finished-at="2017-11-03T17:08:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testgooglesearch -->
       </class> <!-- MyTestNG.jenkins_demo -->
       <class name="MyTestNG.Redirects">
-        <test-method status="PASS" signature="redirects()[pri:0, instance:MyTestNG.Redirects@4cdbe50f]" name="redirects" duration-ms="10058" started-at="2017-10-30T11:35:45Z" finished-at="2017-10-30T11:35:55Z">
+        <test-method status="PASS" signature="redirects()[pri:0, instance:MyTestNG.Redirects@4cdbe50f]" name="redirects" duration-ms="4696" started-at="2017-11-03T17:08:04Z" finished-at="2017-11-03T17:08:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- redirects -->
