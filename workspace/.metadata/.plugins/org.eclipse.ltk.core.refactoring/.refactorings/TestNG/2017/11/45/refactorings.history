@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;RiseTest/src/test/java/RiseSuite&apos;&#x0D;&#x0A;- Original project: &apos;TestNG&apos;&#x0D;&#x0A;- Destination element: &apos;RiseTest/src/test/java/RiseSuite&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MyTestNG.FindBrokenLinks.java&#x0D;&#x0A;     MyTestNG.Redirects.java&#x0D;&#x0A;     MyTestNG.jenkins_demo.java" description="Copy compilation units" destination="=RiseTest/src\/test\/java&lt;RiseSuite" element1="/src&lt;MyTestNG{FindBrokenLinks.java" element2="/src&lt;MyTestNG{Redirects.java" element3="/src&lt;MyTestNG{jenkins_demo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1510001151302" units="3" version="1.0"/>
+</session>

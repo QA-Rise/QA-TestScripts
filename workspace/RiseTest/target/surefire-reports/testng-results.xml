@@ -1,25 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5123" started-at="2017-11-06T16:10:27Z" finished-at="2017-11-06T16:10:33Z">
+  <suite name="Suite" duration-ms="38658" started-at="2017-11-06T20:56:01Z" finished-at="2017-11-06T20:56:40Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="5123" started-at="2017-11-06T16:10:27Z" finished-at="2017-11-06T16:10:33Z">
+    <test name="Test" duration-ms="38658" started-at="2017-11-06T20:56:01Z" finished-at="2017-11-06T20:56:40Z">
+      <class name="RiseSuite.jenkins_demo">
+        <test-method status="PASS" signature="testgooglesearch()[pri:0, instance:RiseSuite.jenkins_demo@36f6e879]" name="testgooglesearch" duration-ms="2374" started-at="2017-11-06T14:56:11Z" finished-at="2017-11-06T14:56:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testgooglesearch -->
+      </class> <!-- RiseSuite.jenkins_demo -->
+      <class name="RiseSuite.Redirects">
+        <test-method status="PASS" signature="redirects()[pri:0, instance:RiseSuite.Redirects@5a61f5df]" name="redirects" duration-ms="26229" started-at="2017-11-06T14:56:13Z" finished-at="2017-11-06T14:56:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- redirects -->
+      </class> <!-- RiseSuite.Redirects -->
       <class name="RiseSuite.NewTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:RiseSuite.NewTest@77b52d12]" name="beforeTest" is-config="true" duration-ms="2550" started-at="2017-11-06T10:10:27Z" finished-at="2017-11-06T10:10:30Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:RiseSuite.NewTest@7225790e]" name="beforeTest" is-config="true" duration-ms="3415" started-at="2017-11-06T14:56:01Z" finished-at="2017-11-06T14:56:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testEasy()[pri:0, instance:RiseSuite.NewTest@77b52d12]" name="testEasy" duration-ms="1727" started-at="2017-11-06T10:10:30Z" finished-at="2017-11-06T10:10:32Z">
+        <test-method status="PASS" signature="testEasy()[pri:0, instance:RiseSuite.NewTest@7225790e]" name="testEasy" duration-ms="1673" started-at="2017-11-06T14:56:05Z" finished-at="2017-11-06T14:56:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEasy -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:RiseSuite.NewTest@77b52d12]" name="afterTest" is-config="true" duration-ms="835" started-at="2017-11-06T10:10:32Z" finished-at="2017-11-06T10:10:33Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:RiseSuite.NewTest@7225790e]" name="afterTest" is-config="true" duration-ms="706" started-at="2017-11-06T14:56:39Z" finished-at="2017-11-06T14:56:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- RiseSuite.NewTest -->
+      <class name="RiseSuite.FindBrokenLinks">
+        <test-method status="PASS" signature="findBrokenLinks()[pri:0, instance:RiseSuite.FindBrokenLinks@54a097cc]" name="findBrokenLinks" duration-ms="4219" started-at="2017-11-06T14:56:07Z" finished-at="2017-11-06T14:56:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findBrokenLinks -->
+      </class> <!-- RiseSuite.FindBrokenLinks -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
