@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;RiseSuite&apos; to &apos;risePages&apos;&#x0D;&#x0A;- Original project: &apos;RiseTest&apos;&#x0D;&#x0A;- Original element: &apos;RiseTest/src/test/java/RiseSuite&apos;&#x0D;&#x0A;- Renamed element: &apos;RiseTest/src/test/java/risePages&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;RiseSuite&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/test\/java&lt;RiseSuite" name="risePages" qualified="false" references="true" stamp="1510096480192" textual="false" version="1.0"/>
+</session>

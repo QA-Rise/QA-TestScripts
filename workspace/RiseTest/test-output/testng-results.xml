@@ -2,42 +2,53 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22761" started-at="2017-11-06T20:54:00Z" finished-at="2017-11-06T20:54:23Z">
+  <suite name="Suite" duration-ms="25157" started-at="2017-11-07T23:16:38Z" finished-at="2017-11-07T23:17:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22761" started-at="2017-11-06T20:54:00Z" finished-at="2017-11-06T20:54:23Z">
-      <class name="RiseSuite.jenkins_demo">
-        <test-method status="PASS" signature="testgooglesearch()[pri:0, instance:RiseSuite.jenkins_demo@4dfa3a9d]" name="testgooglesearch" duration-ms="2781" started-at="2017-11-06T14:54:19Z" finished-at="2017-11-06T14:54:22Z">
+    <test name="ChromeTest" duration-ms="25157" started-at="2017-11-07T23:16:38Z" finished-at="2017-11-07T23:17:03Z">
+      <class name="risePages.jenkins_demo">
+        <test-method status="PASS" signature="testgooglesearch()[pri:0, instance:risePages.jenkins_demo@464bee09]" name="testgooglesearch" duration-ms="384" started-at="2017-11-07T17:16:56Z" finished-at="2017-11-07T17:16:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testgooglesearch -->
-      </class> <!-- RiseSuite.jenkins_demo -->
-      <class name="RiseSuite.Redirects">
-        <test-method status="PASS" signature="redirects()[pri:0, instance:RiseSuite.Redirects@146ba0ac]" name="redirects" duration-ms="5574" started-at="2017-11-06T14:54:13Z" finished-at="2017-11-06T14:54:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- redirects -->
-      </class> <!-- RiseSuite.Redirects -->
-      <class name="RiseSuite.NewTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:RiseSuite.NewTest@e25b2fe]" name="beforeTest" is-config="true" duration-ms="2846" started-at="2017-11-06T14:54:00Z" finished-at="2017-11-06T14:54:03Z">
+      </class> <!-- risePages.jenkins_demo -->
+      <class name="risePages.NewTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:risePages.NewTest@6eebc39e]" name="beforeTest" is-config="true" duration-ms="2544" started-at="2017-11-07T17:16:38Z" finished-at="2017-11-07T17:16:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testEasy()[pri:0, instance:RiseSuite.NewTest@e25b2fe]" name="testEasy" duration-ms="1614" started-at="2017-11-06T14:54:03Z" finished-at="2017-11-06T14:54:04Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:risePages.jenkins_demo@464bee09]" name="beforeTest" is-config="true" duration-ms="1929" started-at="2017-11-07T17:16:41Z" finished-at="2017-11-07T17:16:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testEasy()[pri:0, instance:risePages.NewTest@6eebc39e]" name="testEasy" duration-ms="832" started-at="2017-11-07T17:16:42Z" finished-at="2017-11-07T17:16:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEasy -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:RiseSuite.NewTest@e25b2fe]" name="afterTest" is-config="true" duration-ms="831" started-at="2017-11-06T14:54:22Z" finished-at="2017-11-06T14:54:23Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:risePages.NewTest@6eebc39e]" name="afterTest" is-config="true" duration-ms="730" started-at="2017-11-07T17:17:02Z" finished-at="2017-11-07T17:17:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- RiseSuite.NewTest -->
-      <class name="RiseSuite.FindBrokenLinks">
-        <test-method status="PASS" signature="findBrokenLinks()[pri:0, instance:RiseSuite.FindBrokenLinks@754ba872]" name="findBrokenLinks" duration-ms="9069" started-at="2017-11-06T14:54:04Z" finished-at="2017-11-06T14:54:13Z">
+      </class> <!-- risePages.NewTest -->
+      <class name="risePages.FindBrokenLinks">
+        <test-method status="PASS" signature="findBrokenLinks()[pri:0, instance:risePages.FindBrokenLinks@f6c48ac]" name="findBrokenLinks" duration-ms="13188" started-at="2017-11-07T17:16:43Z" finished-at="2017-11-07T17:16:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- findBrokenLinks -->
-      </class> <!-- RiseSuite.FindBrokenLinks -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- risePages.FindBrokenLinks -->
+      <class name="risePages.Redirects">
+        <test-method status="PASS" signature="redirects()[pri:0, instance:risePages.Redirects@13deb50e]" name="redirects" duration-ms="5530" started-at="2017-11-07T17:16:57Z" finished-at="2017-11-07T17:17:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- redirects -->
+      </class> <!-- risePages.Redirects -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- Suite -->
 </testng-results>

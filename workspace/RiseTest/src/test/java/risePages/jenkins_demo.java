@@ -1,0 +1,68 @@
+package risePages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class jenkins_demo {
+
+	WebDriver driver;
+
+	@BeforeTest
+	@Parameters("browser")
+
+	public void beforeTest(String browser) {
+		if (browser.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver",
+					"C:\\users\\iliona.iliadhi\\Work Folders\\Documents\\chromedriver_win32\\chromedriver.exe");
+			driver = new ChromeDriver();
+
+		} else if (browser.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver",
+					"C:\\Users\\Iliona.Iliadhi\\Work Folders\\Documents\\GitHub\\QA-TestScripts\\workspace\\geckodriver.exe");
+		
+			ProfilesIni profile = new ProfilesIni();
+			FirefoxProfile ffprofile = profile.getProfile("C:\\Users\\Iliona.Iliadhi\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\gr5j0zby.nightly");
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+	        firefoxOptions.setProfile(ffprofile);
+	        driver = new FirefoxDriver(firefoxOptions);
+
+			
+		
+		}
+	}
+
+	@Test
+	public void testgooglesearch() {
+
+		driver.get("http://google.in");
+
+		// we expect the title “Google “ should be present
+
+		String Expectedtitle = "Google";
+
+		// it will fetch the actual title
+
+		String Actualtitle = driver.getTitle();
+
+		System.out.println("Before Assetion " + Expectedtitle + Actualtitle);
+
+		// it will compare actual title and expected title
+
+		Assert.assertEquals(Actualtitle, Expectedtitle);
+
+		// print out the result
+
+		System.out.println("After Assertion " + Expectedtitle + Actualtitle + " Title matched ");
+
+	}
+
+}

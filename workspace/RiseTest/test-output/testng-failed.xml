@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="RiseSuite.FindBrokenLinks">
+      <class name="RiseSuite.jenkins_demo">
         <methods>
-          <include name="findBrokenLinks"/>
+          <include name="beforeTest"/>
+          <include name="testgooglesearch"/>
         </methods>
-      </class> <!-- RiseSuite.FindBrokenLinks -->
+      </class> <!-- RiseSuite.jenkins_demo -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

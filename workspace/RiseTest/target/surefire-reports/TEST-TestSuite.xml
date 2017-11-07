@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="TestSuite" time="34.492" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="TestSuite" time="13.65" errors="0" skipped="0">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="JOB_NAME" value="RiseTest"/>
@@ -26,8 +26,8 @@
     <property name="ProgramFiles" value="C:\Program Files (x86)"/>
     <property name="user.language" value="en"/>
     <property name="JOB_BASE_NAME" value="RiseTest"/>
-    <property name="RUN_CHANGES_DISPLAY_URL" value="http://unconfigured-jenkins-location/job/RiseTest/5/display/redirect?page=changes"/>
-    <property name="BUILD_DISPLAY_NAME" value="#5"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://unconfigured-jenkins-location/job/RiseTest/9/display/redirect?page=changes"/>
+    <property name="BUILD_DISPLAY_NAME" value="#9"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
     <property name="LOCALAPPDATA" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local"/>
     <property name="java.version" value="1.8.0_131"/>
@@ -38,7 +38,7 @@
     <property name="NODE_NAME" value="master"/>
     <property name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
-    <property name="BUILD_ID" value="5"/>
+    <property name="BUILD_ID" value="9"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -53,7 +53,7 @@
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="os.version" value="10.0"/>
-    <property name="RUN_DISPLAY_URL" value="http://unconfigured-jenkins-location/job/RiseTest/5/display/redirect"/>
+    <property name="RUN_DISPLAY_URL" value="http://unconfigured-jenkins-location/job/RiseTest/9/display/redirect"/>
     <property name="POM_VERSION" value="0.0.1-SNAPSHOT"/>
     <property name="TMP" value="C:\WINDOWS\TEMP"/>
     <property name="path.separator" value=";"/>
@@ -75,7 +75,7 @@
     <property name="POM_GROUPID" value="RiseTest"/>
     <property name="user.home" value="C:\WINDOWS\system32\config\systemprofile"/>
     <property name="PUBLIC" value="C:\Users\Public"/>
-    <property name="BUILD_TAG" value="jenkins-RiseTest-5"/>
+    <property name="BUILD_TAG" value="jenkins-RiseTest-9"/>
     <property name="JENKINS_SERVER_COOKIE" value="cc418f2674c5f770"/>
     <property name="ProgramData" value="C:\ProgramData"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -88,7 +88,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="maven.home" value="C:\Users\Iliona.Iliadhi\Work Folders\Documents\apache-maven-3.5.2"/>
     <property name="java.class.path" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.12-alpha-1.jar;C:\Users\Iliona.Iliadhi\Work FoldeRS\Documents\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar;C:\Users\Iliona.Iliadhi\Work FoldeRS\Documents\apache-maven-3.5.2/conf/logging"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Users\Iliona.Iliadhi\Work FoldeRS\Documents\apache-maven-3.5.2 C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.13.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12-alpha-1.jar 56704"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Users\Iliona.Iliadhi\Work FoldeRS\Documents\apache-maven-3.5.2 C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.13.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12-alpha-1.jar 54832"/>
     <property name="Path" value="C:\Program Files\Java\jdk1.8.0_131/bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Sennheiser\SoftphoneSDK\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="PROCESSOR_ARCHITECTURE" value="x86"/>
@@ -114,7 +114,7 @@
 "/>
     <property name="MAVEN_HOME" value="C:\Users\Iliona.Iliadhi\Work FoldeRS\Documents\apache-maven-3.5.2"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="BUILD_NUMBER" value="5"/>
+    <property name="BUILD_NUMBER" value="9"/>
     <property name="BASE" value="C:\Program Files (x86)\Jenkins"/>
     <property name="PROCESSOR_REVISION" value="4e03"/>
     <property name="ProgramW6432" value="C:\Program Files"/>
@@ -128,8 +128,8 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules"/>
   </properties>
-  <testcase classname="RiseSuite.NewTest" name="testEasy" time="1.672"/>
-  <testcase classname="RiseSuite.FindBrokenLinks" name="findBrokenLinks" time="4.216"/>
-  <testcase classname="RiseSuite.jenkins_demo" name="testgooglesearch" time="2.375"/>
-  <testcase classname="RiseSuite.Redirects" name="redirects" time="26.229"/>
+  <testcase classname="RiseSuite.NewTest" name="testEasy" time="1.026"/>
+  <testcase classname="RiseSuite.FindBrokenLinks" name="findBrokenLinks" time="3.841"/>
+  <testcase classname="RiseSuite.jenkins_demo" name="testgooglesearch" time="1.161"/>
+  <testcase classname="RiseSuite.Redirects" name="redirects" time="7.622"/>
 </testsuite>

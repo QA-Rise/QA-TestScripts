@@ -2,10 +2,12 @@ package MyTestNG;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class jenkins_demo {
 
+	
 	@Test
 	public void testgooglesearch() {
 		// System.setProperty("webdriver.gecko.driver","C:\\Users\\Iliona.Iliadhi\\Work
